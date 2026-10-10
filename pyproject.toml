@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sgreasoner"
+version = "0.1.0"
+description = "3D scene graphs from depth + open-vocabulary perception for counting and relational reasoning"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Ali Torabi" }]
+dependencies = [
+  "numpy>=1.24",
+  "pillow>=10.0",
+  "spatial-scene-bench @ git+https://github.com/selfishout/spatial-scene-bench.git",
+]
+
+[project.optional-dependencies]
+foundation = ["torch>=2.2", "transformers>=4.49"]
+llm = ["openai>=1.40"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+sgr-bench = "sgreasoner.run_bench:main"
+
+[tool.setuptools.packages.find]
+include = ["sgreasoner*"]

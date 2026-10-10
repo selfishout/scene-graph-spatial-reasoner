@@ -1,0 +1,55 @@
+{
+  "closest": {
+    "acc": 0.9974619289340102,
+    "n": 394
+  },
+  "compare_count": {
+    "acc": 1.0,
+    "n": 399
+  },
+  "count": {
+    "acc": 1.0,
+    "mra": 1.0,
+    "n": 400
+  },
+  "count_relation": {
+    "acc": 1.0,
+    "mra": 1.0,
+    "n": 400
+  },
+  "distance": {
+    "acc": 0.97575,
+    "mra": 0.97575,
+    "n": 400
+  },
+  "ego_direction": {
+    "acc": 1.0,
+    "n": 400
+  },
+  "relation": {
+    "acc": 1.0,
+    "n": 400
+  },
+  "video_closest": {
+    "acc": 0.9974619289340102,
+    "n": 394
+  },
+  "video_count": {
+    "acc": 0.315,
+    "mra": 0.42825,
+    "n": 400
+  },
+  "video_distance": {
+    "acc": 0.9665,
+    "mra": 0.9665,
+    "n": 400
+  },
+  "video_ego_direction": {
+    "acc": 0.9975,
+    "n": 400
+  },
+  "overall": {
+    "acc": 0.9317885325334564,
+    "n": 4387
+  }
+}
