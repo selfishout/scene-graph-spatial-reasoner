@@ -133,11 +133,19 @@ class FoundationBackend:
         device: str | None = None,
     ):
         import torch
-        from transformers import (AutoImageProcessor, AutoModelForDepthEstimation, AutoModelForZeroShotObjectDetection,
-                                  AutoProcessor, SamModel, SamProcessor)
+        from transformers import (
+            AutoImageProcessor,
+            AutoModelForDepthEstimation,
+            AutoModelForZeroShotObjectDetection,
+            AutoProcessor,
+            SamModel,
+            SamProcessor,
+        )
 
         self.torch = torch
-        self.device = device or ("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
+        if device is None:
+            device = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
+        self.device = device
         self.vocabulary = vocabulary
         self.box_threshold, self.text_threshold = box_threshold, text_threshold
         self.size_threshold = size_threshold

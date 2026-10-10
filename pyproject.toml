@@ -26,3 +26,12 @@ sgr-bench = "sgreasoner.run_bench:main"
 
 [tool.setuptools.packages.find]
 include = ["sgreasoner*"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "I"]
+# O, D, K, R, T follow ray-tracing / multi-view geometry notation
+ignore = ["E741", "E731", "B905"]

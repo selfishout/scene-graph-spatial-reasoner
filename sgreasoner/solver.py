@@ -28,8 +28,10 @@ PATTERNS = [
     ("relation", re.compile(rf"^Is the (.+?) ({_REL}) the (.+?)\?$")),
     ("compare_count", re.compile(r"^Are there more (.+?) than (.+?)\?$")),
     ("closest", re.compile(r"^Which object is closest to the (.+?) in 3D space\?\s*(.*)$")),
-    ("distance", re.compile(r"^What is the distance between the center of the (.+?) and the center of the (.+?), in meters\?$")),
-    ("ego", re.compile(r"^Imagine you are standing at the (.+?) and facing the (.+?)\. Where is the (.+?) relative to you\?\s*(.*)$")),
+    ("distance", re.compile(r"^What is the distance between the center of the (.+?) "
+                            r"and the center of the (.+?), in meters\?$")),
+    ("ego", re.compile(r"^Imagine you are standing at the (.+?) and facing the (.+?)\. "
+                       r"Where is the (.+?) relative to you\?\s*(.*)$")),
     ("video_count", re.compile(r"^How many (.+?) are in this room\?")),
 ]
 
