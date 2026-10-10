@@ -4,8 +4,15 @@ from spatial_scene_bench.camera import default_camera, orbit_cameras
 from spatial_scene_bench.render import render
 from spatial_scene_bench.scene import Scene, SceneObject
 
-from sgreasoner.lifting import (Object3D, backproject, calibrate_depth_scale, fit_plane_ransac, fuse_views,
-                                gravity_frame_from_ground, object_from_points)
+from sgreasoner.lifting import (
+    Object3D,
+    backproject,
+    calibrate_depth_scale,
+    fit_plane_ransac,
+    fuse_views,
+    gravity_frame_from_ground,
+    object_from_points,
+)
 
 
 def sphere_scene():
